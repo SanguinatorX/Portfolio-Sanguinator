@@ -1,6 +1,11 @@
 @layer base {
   html, body {
-    font-family: 'Audiowide';
+    /*font-family: 'Audiowide';*/
+    /*
+     * Ajoute au moins une font ou la personne va l'avoir
+     * et il faut toujours mettre en dernier "sans-serif" ou "serif" ou "monospace"
+     */
+    font-family: 'Audiowide', 'Verdana', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
