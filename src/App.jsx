@@ -1,10 +1,20 @@
 import { useState } from 'react';
 
+function Header () {
+  return (
+    <header>
+      <div className="favicon-container">
+        <img src="/public/favicon.ico" alt="Favicon" id="favicon" />
+      </div>
+      <h1>Bienvenue sur le portfolio de <cite>SanguinatorX</cite> !</h1>
+    </header>
+  );
+}
+
 function App () {
   return (
     <div className='App'>
-      <img src="/public/favicon.ico" alt="Favicon" />
-      <h1>Bienvenue sur le portfolio de <cite>SanguinatorX</cite> !</h1>
+      <Header />
       <p>
         Je suis un développeur passionné par la création de projets innovants et fonctionnels.
         Sur ce portfolio, vous trouverez une sélection de mes travaux les plus récents,
