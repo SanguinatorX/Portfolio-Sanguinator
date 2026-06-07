@@ -43,20 +43,86 @@ useEffect(() => {
   );
 }
 
+function Intro() {
+  return (
+    <section className="intro">
+      <p>
+        Je suis un développeur passionné par la création de projets innovants et fonctionnels.
+        J’aime transformer des idées en interfaces concrètes, propres et efficaces, en utilisant des technologies modernes du web.
+      </p>
+      <p>
+        Sur ce portfolio, vous trouverez une sélection de mes travaux les plus récents, allant de petits projets d’apprentissage
+        à des applications plus complètes. Chaque projet m’a permis de progresser sur différents aspects comme le front-end,
+        la logique de développement et la gestion de l’architecture.
+      </p>
+      <p>
+        Je m’intéresse particulièrement à l’amélioration de l’expérience utilisateur, à la performance des applications
+        et à la qualité du code. J’essaie constamment d’apprendre de nouvelles technologies et de perfectionner mes compétences.
+      </p>
+      <p>
+        N'hésitez pas à parcourir les différentes sections pour en savoir plus sur mon parcours et mes réalisations.
+        Si vous avez un projet intéressant ou une idée à développer, je suis toujours ouvert aux collaborations.
+      </p>
+    </section>
+  );
+}
+
+function Travaux () {
+  return (
+    <section className="travaux">
+      <h2>Mes réalisations</h2>
+      <ul>
+        <li><h3>Le développement web</h3>
+          <p>
+            Découvrez mes projets et mon expérience dans le développement.
+          </p>
+          <button>Voir</button>
+        </li>
+        <li><h3>La cybersécurité</h3>
+          <p>
+            Voyez mes compétences que je possède en matière de cybersécurité.
+          </p>
+          <button>Voir</button>
+        </li>
+        <li><h3>Le gaming</h3>
+          <p>
+            Découvrez mes progrès et ma progression dans toutes sortes de jeux vidéos.
+          </p>
+          <button>Voir</button>
+        </li>
+        <li><h3>L'intelligence artificielle</h3>
+          <p>
+            Visualisez ce que j'ai pu faire en utilisant l'intelligence artificielle.
+          </p>
+          <button>Voir</button>
+        </li>
+        <li><h3>La modélisation 3D</h3>
+          <p>
+            Constatez mes oeuvres tridimentionelles virtuelles que j'ai pu réaliser.
+          </p>
+          <button>Voir</button>
+        </li>
+        <li><h3>La littérature</h3>
+          <p>
+            Lisez mes ouvrages littéraires que j'ai écri de ma main et de mon esprit.
+          </p>
+          <button>Voir</button>
+        </li>
+      </ul>
+    </section>
+  )
+}
+
 function App () {
   const textColor = useSelector((state) => state.textColor);
   return (
     <div className='App' style={{ color: textColor }}>
       <Header />
-      <p>
-        Je suis un développeur passionné par la création de projets innovants et fonctionnels.
-        Sur ce portfolio, vous trouverez une sélection de mes travaux les plus récents,
-        ainsi que des informations sur mes compétences et mon parcours professionnel.
-      </p>
-      <p>
-        N'hésitez pas à parcourir les différentes sections pour en savoir plus sur mes projets et mes expériences.
-        Si vous avez des questions ou souhaitez collaborer, n'hésitez pas à me contacter !
-      </p>
+      <hr />
+      <main>
+        <Intro />
+        <Travaux />
+      </main>
     </div>
   )
 }
