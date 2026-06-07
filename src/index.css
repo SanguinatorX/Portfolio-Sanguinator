@@ -4,7 +4,18 @@
     font-size: 16px;
     margin: 0;
     padding: 0;
-    line-height: 1.5;
+    line-height: 1.2;
     overflow-x: hidden;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.4)
+        ), url('/public/cyber-background.png') no-repeat fixed;
+    background-size: cover;
+  }
+
+  ::selection {
+    background: #00fff7;
+    color: #0b0b0f;
   }
 }

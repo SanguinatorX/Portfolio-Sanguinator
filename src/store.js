@@ -1,19 +1,19 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
-const slice = createSlice({
-  name: "slice",
-  initialState: "initialState",
+const colorTextSlice = createSlice({
+  name: "colorText",
+  initialState: "white",
   reducers: {
-    change: (prevState, action) => {
+    changeColor: (prevState, action) => {
       return action.payload;
     }
   }
 });
 
-export const { change } = slice.actions;
+export const { changeColor } = colorTextSlice.actions;
 
 export const store = configureStore({
   reducer: {
-    valeur: slice.reducer,
+    textColor: colorTextSlice.reducer,
   },
 });

@@ -1,10 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useSelector } from 'react-redux';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAnglesRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons'
 
 function Header () {
+  const [arrowCount, setArrowCount] = useState(1);
+
+useEffect(() => {
+  const interval = setInterval(() => {
+    setArrowCount(prev => (prev < 4 ? prev + 1 : 1));
+    if (window.innerWidth < 800) {
+      setArrowCount(1);
+    }
+    if (window.innerWidth < 990) {
+      setArrowCount(prev => (prev < 3 ? prev + 1 : 1));
+    }
+  }, 340);
+
+  return () => clearInterval(interval);
+}, []);
+
   return (
     <header>
-      <div className="favicon-container">
-        <img src="/public/favicon.ico" alt="Favicon" id="favicon" />
+      <div>
+        <span>
+          {[...Array(arrowCount)].map((_, i) => (
+            <FontAwesomeIcon key={`${arrowCount}-${i}`} icon={faAnglesRight} />
+          ))}
+        </span>
+        <div className="favicon-container">
+          <img src="/public/favicon.ico" alt="Favicon" id="favicon" />
+        </div>
+        <span>
+          {[...Array(arrowCount)].map((_, i) => (
+            <FontAwesomeIcon key={`${arrowCount}-${i}`} icon={faAnglesLeft} />
+          ))}
+        </span>
       </div>
       <h1>Bienvenue sur le portfolio de <cite>SanguinatorX</cite> !</h1>
     </header>
@@ -12,8 +44,9 @@ function Header () {
 }
 
 function App () {
+  const textColor = useSelector((state) => state.textColor);
   return (
-    <div className='App'>
+    <div className='App' style={{ color: textColor }}>
       <Header />
       <p>
         Je suis un développeur passionné par la création de projets innovants et fonctionnels.
