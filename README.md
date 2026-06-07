@@ -1,11 +1,11 @@
-# <u>Portfolio-Sanguinator</u>
+# Portfolio-Sanguinator
 
 > **Portfolio personnel de Sanguinator**  
 > Un site pour me présenter, montrer mes projets, poser mon univers, et faire un vrai point d’entrée sur tout ce que je construis.
 
 ---
 
-## <u>À propos</u>
+## À propos
 
 Bienvenue sur mon portfolio personnel.
 
@@ -17,7 +17,7 @@ Pas les trucs propres mais morts, sans personnalité, qui donnent l’impression
 
 ---
 
-## <u>Ce que montre ce portfolio</u>
+## Ce que montre ce portfolio
 
 Ce site rassemble plusieurs choses :
 
@@ -32,7 +32,7 @@ faire un site qui donne une impression nette dès les premières secondes, sans 
 
 ---
 
-## <u>Mon univers</u>
+## Mon univers
 
 Je suis attiré par les ambiances :
 
@@ -47,25 +47,25 @@ Pas un template générique avec deux couleurs et une police triste.
 
 ---
 
-## <u>Pourquoi ce projet existe</u>
+## Pourquoi ce projet existe
 
 Ce portfolio me sert à plusieurs choses :
 
-### <u>1. Me présenter</u>
+### 1. Me présenter
 Avoir un espace à moi, propre et cohérent, pour montrer qui je suis.
 
-### <u>2. Centraliser mes projets</u>
+### 2. Centraliser mes projets
 Rassembler au même endroit ce que je fais, ce que j’apprends, et ce que je construis.
 
-### <u>3. Montrer mon évolution</u>
+### 3. Montrer mon évolution
 Ce site peut évoluer avec moi, au lieu de rester figé comme un site de lycée abandonné après 3 semaines.
 
-### <u>4. Travailler mon identité</u>
+### 4. Travailler mon identité
 Créer quelque chose de personnel, reconnaissable, et vraiment à mon image.
 
 ---
 
-## <u>Ce que tu peux y trouver</u>
+## Ce que tu peux y trouver
 
 - une page de présentation
 - des sections sur mes projets
@@ -75,7 +75,7 @@ Créer quelque chose de personnel, reconnaissable, et vraiment à mon image.
 
 ---
 
-## <u>Mon objectif</u>
+## Mon objectif
 
 Mon but, c’est de construire un portfolio :
 
@@ -89,7 +89,7 @@ Je veux que ce site soit à la fois une carte d’identité numérique et une pe
 
 ---
 
-## <u>En résumé</u>
+## En résumé
 
 **Portfolio-Sanguinator** est un site personnel qui mélange présentation, projets et identité visuelle dans une ambiance cyberpunk, sombre et moderne.
 
@@ -97,9 +97,11 @@ C’est un espace fait pour me représenter, montrer ce que je fais, et faire é
 
 ---
 
-## <u>En construction</u>
+## En construction
 
 Ce projet est amené à évoluer.
 
 Je continue d’ajouter, d’améliorer, de corriger et de rendre le tout plus propre au fil du temps.  
 Parce qu’un bon portfolio, ça ne se jette pas en vrac sur GitHub en priant pour que ça passe.
+
+- [ ] Instruction dans le README.md pour indiquer le "How to install"
