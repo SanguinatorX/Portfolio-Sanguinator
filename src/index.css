@@ -1,3 +1,36 @@
+@keyframes neonPulse {
+    from {
+        filter: brightness(1);
+    }
+    to {
+        filter: brightness(1.5);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    45%, 55% {
+        opacity: 0.8;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 @layer base {
   html, body {
     font-family: 'Audiowide';

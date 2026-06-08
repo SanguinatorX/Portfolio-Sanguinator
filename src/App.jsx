@@ -121,9 +121,10 @@ function Travaux () {
 
 function App () {
   const textColor = useSelector((state) => state.textColor);
+  const theme = useSelector((state) => state.theme);
   
   return (
-    <div className='App' style={{ color: textColor }}>
+    <div className={theme} style={{ color: textColor }}>
       <Header />
       <hr />
       <main>

@@ -1,34 +1,6 @@
-@keyframes neonPulse {
-    from {
-        filter: brightness(1);
-    }
-    to {
-        filter: brightness(1.5);
-    }
-}
-
-@keyframes gradientMove {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
-@keyframes fade {
-    0% {
-        opacity: 1;
-    }
-    45%, 55% {
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 1;
-    }
+.standardTheme {
+    --cyberPink: #ff00ff;
+    --cyberBlue: #00ffff;
 }
 
 header {
@@ -48,16 +20,16 @@ header div span {
     justify-self: center;
     flex-grow: 1;
     font-size: 3.5em;
-    color: #00ffff;
+    color: var(--cyberBlue);
 }
 
 header div span svg {
-    color: #00ffff;
+    color: var(--cyberBlue);
     margin: 0 12px;
-    filter: drop-shadow(0 0 5px #00ffff)
-            drop-shadow(0 0 10px #00ffff)
-            drop-shadow(0 0 20px #ff00ff)
-            drop-shadow(0 0 40px #ff00ff);
+    filter: drop-shadow(0 0 5px var(--cyberBlue))
+            drop-shadow(0 0 10px var(--cyberBlue))
+            drop-shadow(0 0 20px var(--cyberPink))
+            drop-shadow(0 0 40px var(--cyberPink));
 }
 
 .favicon-container {
@@ -66,17 +38,17 @@ header div span svg {
     padding: 2px;
     border-radius: 20px;
     background: linear-gradient(45deg,
-        #00ffff 0%,
-        #00ffff 10%,
-        #ff00ff 20%,
-        #00ffff 30%,
-        #ff00ff 40%,
-        #00ffff 50%,
-        #ff00ff 60%,
-        #00ffff 70%,
-        #ff00ff 80%,
-        #00ffff 90%,
-        #ff00ff 100%
+        var(--cyberBlue) 0%,
+        var(--cyberBlue) 10%,
+        var(--cyberPink) 20%,
+        var(--cyberBlue) 30%,
+        var(--cyberPink) 40%,
+        var(--cyberBlue) 50%,
+        var(--cyberPink) 60%,
+        var(--cyberBlue) 70%,
+        var(--cyberPink) 80%,
+        var(--cyberBlue) 90%,
+        var(--cyberPink) 100%
     );
     background-size: 250% 250%;
     animation: gradientMove 3s linear infinite;
@@ -102,23 +74,23 @@ header div span svg {
         0% 10%
     );
 
-    border: 1px solid #00ffff;
+    border: 1px solid var(--cyberBlue);
     animation: neonPulse 1.5s infinite alternate, fade 4s ease-in-out infinite;
 }
 
 header h1 {
     font-size: 1.8em;
     text-shadow:
-        0 0 5px #00ffff,
-        0 0 10px #00ffff,
-        0 0 20px #ff00ff,
-        0 0 40px #ff00ff;
+        0 0 5px var(--cyberBlue),
+        0 0 10px var(--cyberBlue),
+        0 0 20px var(--cyberPink),
+        0 0 40px var(--cyberPink);
 }
 
 hr {
     border: 0;
     height: 1px;
-    background: linear-gradient(to right, transparent, #00ffff, transparent);
+    background: linear-gradient(to right, transparent, var(--cyberBlue), transparent);
     margin: 20px 0;
 }
 
@@ -133,16 +105,16 @@ main .intro {
   padding: 10px;
   margin: 10px 32px;
   border-radius: 14px;
-  border: solid 1px #00ffff;
+  border: solid 1px var(--cyberBlue);
 }
 
 .travaux h2 {
   text-align: center;
-  color: #00ffff;
+  color: var(--cyberBlue);
   cursor: pointer;
   text-shadow:
-    0 0 10px #00ffff,
-    0 0 25px #ff00ff;
+    0 0 10px var(--cyberBlue),
+    0 0 25px var(--cyberPink);
   margin-bottom: 80px;
   transition: all 0.1s linear;
 }
@@ -166,7 +138,7 @@ main .intro {
   text-align: center;
   padding: 12px;
   background: rgba(15, 15, 30, 0.8);
-  border: 1px solid #00ffff;
+  border: 1px solid var(--cyberBlue);
   border-radius: 12px;
   position: relative;
   overflow: hidden;
@@ -179,27 +151,28 @@ main .intro {
 }
 
 .travaux li h3 {
-  color: #ff00ff;
+  color: var(--cyberPink);
   text-decoration: underline;
 }
 
 .travaux li:hover {
   transform: translateY(-4px) scale(1.02);
-  border-color: #ff00ff;
+  border-color: var(--cyberPink);
   box-shadow:
-    0 0 10px #00ffff,
-    0 0 16px #ff00ff;
+    0 0 10px var(--cyberBlue),
+    0 0 16px var(--cyberPink);
 }
 
 .travaux button {
     position: relative;
     padding: 8px 12px;
+    margin-top: 6px;
     width: 40%;
 
-    border: 1px solid #00ffff;
+    border: 1px solid var(--cyberBlue);
     background: rgba(0, 10, 20, 0.85);
 
-    color: #00ffff;
+    color: var(--cyberBlue);
     font-family: "Consolas", monospace;
     font-size: 14px;
     text-transform: uppercase;
@@ -210,18 +183,18 @@ main .intro {
 
     border-radius: 4px;
     box-shadow:
-        0 0 5px #00ffff,
+        0 0 5px var(--cyberBlue),
         inset 0 0 5px rgba(0, 255, 255, 0.5);
 
     transition: all 0.25s ease;
 }
 
 .travaux button:hover {
-    background: #00ffff;
+    background: var(--cyberBlue);
     color: #050510;
 
     box-shadow:
-        0 0 10px #00ffff;
+        0 0 10px var(--cyberBlue);
     transform: translateY(-3px);
 }
 
@@ -255,8 +228,8 @@ main .intro {
     width: 0;
     height: 2px;
 
-    background: #00ffff;
-    box-shadow: 0 0 10px #00ffff;
+    background: var(--cyberBlue);
+    box-shadow: 0 0 10px var(--cyberBlue);
 
     transform: translateX(-50%);
     transition: all 0.25s ease;
@@ -285,7 +258,7 @@ section.realisations > * {
     rgba(30, 10, 45, 0.95)
   );
 
-  border: 1px solid #00f7ff;
+  border: 1px solid var(--cyberBlue);
   border-radius: 12px;
 
   width: 400px;
@@ -312,15 +285,8 @@ section.realisations > * {
   position: relative;
   overflow: hidden;
   transition: all 0.04s ease-in-out;
-    box-shadow:
-    0 0 0 2px rgba(0, 221, 255, 0.1),
-    0 6px 8px rgba(0, 255, 255, 0.5);
 }
-
 .colorator-wrap:active {
-  box-shadow:
-    0 0 0 2px rgba(0, 221, 255, 0.2),
-    0 3px 5px rgba(0, 255, 255, 0.7);
   transform: scale(0.94);
 }
 
