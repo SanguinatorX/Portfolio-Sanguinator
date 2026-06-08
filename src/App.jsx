@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -68,10 +68,15 @@ function Intro() {
 }
 
 function Travaux () {
+  const scrollingUl = useRef(null);
+
   return (
     <section className="travaux">
-      <h2>Mes réalisations</h2>
-      <ul>
+      <h2 onClick={() =>
+            scrollingUl.current?.scrollIntoView({
+            behavior: "smooth",
+          })}>⮟&nbsp;Mes réalisations&nbsp;⮟</h2>
+      <ul ref={scrollingUl}>
         <li><h3>Le développement web</h3>
           <p>
             Découvrez mes projets et mon expérience dans le développement.
