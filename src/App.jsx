@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { useSelector } from 'react-redux';
+import { Link, Outlet } from "react-router-dom"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAnglesRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons'
@@ -81,37 +82,37 @@ function Travaux () {
           <p>
             Découvrez mes projets et mon expérience dans le développement.
           </p>
-          <button>Voir</button>
+          <Link to="/webdev"><button>Voir</button></Link>
         </li>
         <li><h3>La cybersécurité</h3>
           <p>
             Voyez mes compétences que je possède en matière de cybersécurité.
           </p>
-          <button>Voir</button>
+          <Link to="/cybersecurite"><button>Voir</button></Link>
         </li>
         <li><h3>Le gaming</h3>
           <p>
             Découvrez mes progrès et ma progression dans toutes sortes de jeux vidéos.
           </p>
-          <button>Voir</button>
+          <Link to="/gaming"><button>Voir</button></Link>
         </li>
         <li><h3>L'intelligence artificielle</h3>
           <p>
             Visualisez ce que j'ai pu faire en utilisant l'intelligence artificielle.
           </p>
-          <button>Voir</button>
+          <Link to="/IA"><button>Voir</button></Link>
         </li>
         <li><h3>La modélisation 3D</h3>
           <p>
             Constatez mes oeuvres tridimentionelles virtuelles que j'ai pu réaliser.
           </p>
-          <button>Voir</button>
+          <Link to="/modelisation"><button>Voir</button></Link>
         </li>
         <li><h3>La littérature</h3>
           <p>
             Lisez mes ouvrages littéraires que j'ai écri de ma main et de mon esprit.
           </p>
-          <button>Voir</button>
+          <Link to="/litterature"><button>Voir</button></Link>
         </li>
       </ul>
     </section>
@@ -120,6 +121,7 @@ function Travaux () {
 
 function App () {
   const textColor = useSelector((state) => state.textColor);
+  
   return (
     <div className='App' style={{ color: textColor }}>
       <Header />
@@ -128,6 +130,7 @@ function App () {
         <Intro />
         <Travaux />
       </main>
+      <Outlet />
     </div>
   )
 }

@@ -1,12 +1,15 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
-function notFound () {
+function NotFound () {
+  const textColor = useSelector((state) => state.textColor);
+
   return (
-    <main>
+    <aside style={{ color: textColor }}>
       <h1>Erreur de url...</h1>
       <p>Impossible de trouver cette page sur ce site</p>
-    </main>
+    </aside>
   );
 };
 
-export default notFound;
+export default NotFound;
