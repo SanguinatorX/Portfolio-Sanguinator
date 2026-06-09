@@ -3,7 +3,9 @@ import { useSelector } from 'react-redux';
 import { Link, Outlet } from "react-router-dom"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAnglesRight, faAnglesLeft } from '@fortawesome/free-solid-svg-icons'
+import { faAnglesRight, faAnglesLeft, faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
+
+import NavMenu from "./navMenu.jsx";
 
 function Header () {
   const [arrowCount, setArrowCount] = useState(1);
@@ -120,11 +122,14 @@ function Travaux () {
 }
 
 function App () {
+  const [isOpen, setIsOpen] = useState(false);
   const textColor = useSelector((state) => state.textColor);
   const theme = useSelector((state) => state.theme);
   
   return (
     <div className={theme} style={{ color: textColor }}>
+      <button id="burgerButton" onClick={() => { setIsOpen((prev) => !prev) }}><FontAwesomeIcon icon={faBarsStaggered} /></button>
+      <NavMenu isOpen={isOpen} />
       <Header />
       <hr />
       <main>
