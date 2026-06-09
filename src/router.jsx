@@ -1,8 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./realisations.jsx";
-import NotFound from './notFound';
+import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./pages/realisations.jsx";
+import NotFound from './pages/notFound';
+import Feedback from "./pages/feedback.jsx";
+import Contacts from "./pages/contacts.jsx";
 
 export const router = createBrowserRouter([
   {
@@ -38,5 +40,13 @@ export const router = createBrowserRouter([
   {
     path: '*',
     element: <NotFound />,
+  },
+  {
+    path: "/feedback",
+    element: <Feedback />,
+  },
+  {
+    path: "/contacts",
+    element: <Contacts />,
   },
 ]);

@@ -8,8 +8,8 @@ function NavMenu (props) {
     <nav className={props.isOpen ? "affiche" : "cache"}>
       <ul>
         <li><Link to="/"><button><FontAwesomeIcon icon={faHouse} />&nbsp;Accueil</button></Link></li>
-        <li><Link to=""><button><FontAwesomeIcon icon={faIdCardClip} />&nbsp;Contacter</button></Link></li>
-        <li><Link to=""><button><FontAwesomeIcon icon={faCommentDots} />&nbsp;Feedback</button></Link></li>
+        <li><Link to="/contacts"><button><FontAwesomeIcon icon={faIdCardClip} />&nbsp;Contacter</button></Link></li>
+        <li><Link to="/feedback"><button><FontAwesomeIcon icon={faCommentDots} />&nbsp;Feedback</button></Link></li>
         <li><Link to=""><button><FontAwesomeIcon icon={faGear} />&nbsp;Paramètres</button></Link></li>
       </ul>
     </nav>
