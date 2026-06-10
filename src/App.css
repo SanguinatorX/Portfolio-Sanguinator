@@ -341,14 +341,14 @@ nav {
   border-bottom: 2px solid var(--cyberBlue);
   z-index: 2;
 
-  transition: all 0.2s ease-out;
+  transition: all 0.25s ease-out;
 }
 
 nav.affiche {
   transform: translateY(0);
 }
 nav.cache {
-  transform: translateY(-100%);
+  transform: translateY(-120%);
 }
 
 nav ul {

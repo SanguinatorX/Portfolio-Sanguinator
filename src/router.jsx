@@ -3,7 +3,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import App from './App';
 import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./pages/realisations.jsx";
 import NotFound from './pages/notFound';
-import Feedback from "./pages/feedback.jsx";
+import Propos from "./pages/propos.jsx";
 import Contacts from "./pages/contacts.jsx";
 
 export const router = createBrowserRouter([
@@ -42,8 +42,8 @@ export const router = createBrowserRouter([
     element: <NotFound />,
   },
   {
-    path: "/feedback",
-    element: <Feedback />,
+    path: "/propos",
+    element: <Propos />,
   },
   {
     path: "/contacts",
