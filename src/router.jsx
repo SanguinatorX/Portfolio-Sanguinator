@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import App from './App';
-import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./pages/realisations.jsx";
-import NotFound from './pages/notFound';
-import Propos from "./pages/propos.jsx";
-import Contacts from "./pages/contacts.jsx";
+import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./components/realisations.jsx";
+import NotFound from './components/notFound';
+import Propos from "./components/propos.jsx";
+import Contacts from "./components/contacts.jsx";
 
 export const router = createBrowserRouter([
   {

@@ -5,7 +5,7 @@ import { Link, Outlet } from "react-router-dom"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAnglesRight, faAnglesLeft, faBarsStaggered } from '@fortawesome/free-solid-svg-icons'
 
-import NavMenu from "./pages/navMenu.jsx";
+import NavMenu from "./components/navMenu.jsx";
 
 function Header () {
   const [arrowCount, setArrowCount] = useState(1);
