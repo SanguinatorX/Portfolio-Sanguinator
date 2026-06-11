@@ -5,12 +5,17 @@ import { Webdev, Cybersecurite, Gaming, IA, Modelisation, Litterature } from "./
 import NotFound from './components/notFound';
 import Propos from "./components/propos.jsx";
 import Contacts from "./components/contacts.jsx";
+import Settings from './components/settings.jsx';
 
 export const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
     children: [
+      {
+        path: "settings",
+        element: <Settings />,
+      },
       {
         path: "webdev",
         element: <Webdev />,

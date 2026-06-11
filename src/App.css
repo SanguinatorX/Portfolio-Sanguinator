@@ -3,6 +3,23 @@
     --cyberBlue: #00ffff;
 }
 
+.escapeButton {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  font-size: 2.8em;
+  background: none;
+  color: white;
+  border: none;
+}
+
+.escapeButton svg {
+  filter: drop-shadow(0 0 5px var(--cyberBlue))
+    drop-shadow(0 0 10px var(--cyberBlue))
+    drop-shadow(0 0 20px var(--cyberPink))
+    drop-shadow(0 0 40px var(--cyberPink));
+}
+
 header {
     text-align: center;
     margin-bottom: 20px;
@@ -241,11 +258,11 @@ section.realisations {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.75);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 999;
+  z-index: 3;
 }
 
 section.realisations > *:not(.escapeButton) {
@@ -271,23 +288,6 @@ section.realisations > *:not(.escapeButton) {
     transform 0.25s ease,
     box-shadow 0.25s ease,
     border-color 0.25s ease;
-}
-
-.escapeButton {
-  position: absolute;
-  top: 12px;
-  right: 30px;
-  font-size: 2.8em;
-  background: none;
-  color: white;
-  border: none;
-}
-
-.escapeButton svg {
-  filter: drop-shadow(0 0 5px var(--cyberBlue))
-    drop-shadow(0 0 10px var(--cyberBlue))
-    drop-shadow(0 0 20px var(--cyberPink))
-    drop-shadow(0 0 40px var(--cyberPink));
 }
 
 #burgerButton {
@@ -378,8 +378,11 @@ nav ul button {
     font-size: 12px;
     letter-spacing: 2px;
     text-transform: uppercase;
-
     cursor: pointer;
+
+    &:active {
+      transform: scale(0.95);
+    }
 
     box-shadow:
         0 0 8px rgba(0, 255, 255, 0.25),
@@ -399,8 +402,44 @@ nav ul button:hover {
         0 0 25px rgba(255, 0, 255, 0.25);
 }
 
-nav ul button:active {
-    transform: scale(0.95);
+#settingsPage {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 3;
+}
+
+.settingsBox {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 15, 30, 0.95),
+    rgba(30, 10, 45, 0.95)
+  );
+
+  border: 1px solid var(--cyberBlue);
+  border-radius: 12px;
+
+  width: 400px;
+  padding: 12px 24px;
+
+  box-shadow:
+    0 0 8px rgba(0, 247, 255, 0.5),
+    0 0 20px rgba(0, 247, 255, 0.2),
+    inset 0 0 10px rgba(255, 0, 200, 0.15);
+
+  backdrop-filter: blur(4px);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .colorator-wrap {

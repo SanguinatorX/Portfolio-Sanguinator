@@ -3,9 +3,10 @@ import { useSelector } from "react-redux";
 
 function NotFound () {
   const textColor = useSelector((state) => state.textColor);
+  const theme = useSelector((state) => state.theme);
 
   return (
-    <aside style={{ color: textColor }}>
+    <aside className={theme} style={{ color: textColor }}>
       <h1>Erreur de url...</h1>
       <p>Impossible de trouver cette page sur ce site</p>
     </aside>
