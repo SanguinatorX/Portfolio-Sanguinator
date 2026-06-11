@@ -13,7 +13,7 @@ function Contacts () {
   const theme = useSelector((state) => state.theme);
 
   return (
-    <div className={theme} id="Feedback" id="contacts" style={{ color: textColor }}>
+    <div className={theme} id="contacts" id="contacts" style={{ color: textColor }}>
       <button id="burgerButton" onClick={() => { setIsOpen((prev) => !prev) }}><FontAwesomeIcon icon={faBarsStaggered} /></button>
       <NavMenu isOpen={isOpen} />
       <h1>Contacts</h1>

@@ -127,7 +127,7 @@ function App () {
   const theme = useSelector((state) => state.theme);
   
   return (
-    <div className={theme} style={{ color: textColor }}>
+    <div id="app" className={theme} style={{ color: textColor }}>
       <button id="burgerButton" onClick={() => { setIsOpen((prev) => !prev) }}><FontAwesomeIcon icon={faBarsStaggered} /></button>
       <NavMenu isOpen={isOpen} />
       <Header />

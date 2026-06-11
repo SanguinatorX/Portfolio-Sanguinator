@@ -13,7 +13,7 @@ function Propos () {
   const theme = useSelector((state) => state.theme);
 
   return (
-    <div className={theme} id="Feedback" style={{ color: textColor }}>
+    <div className={theme} id="propos" style={{ color: textColor }}>
       <button id="burgerButton" onClick={() => { setIsOpen((prev) => !prev) }}><FontAwesomeIcon icon={faBarsStaggered} /></button>
       <NavMenu isOpen={isOpen} />
       <h1>A propos</h1>

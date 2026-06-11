@@ -117,10 +117,9 @@ main .intro {
     0 0 25px var(--cyberPink);
   margin-bottom: 80px;
   transition: all 0.1s linear;
-}
-
-.travaux h2:hover {
-  transform: scale(1.04);
+  &:hover {
+    transform: scale(1.04);
+  }
 }
 
 .travaux ul {
@@ -149,17 +148,17 @@ main .intro {
   transition: 0.25s ease;
 }
 
-.travaux li h3 {
-  color: #8B5CF6;
-  text-decoration: underline;
-}
-
 .travaux li:hover {
   transform: translateY(-4px) scale(1.02);
   border-color: var(--cyberPink);
   box-shadow:
     0 0 10px var(--cyberBlue),
     0 0 16px var(--cyberPink);
+}
+
+.travaux li h3 {
+  color: #8B5CF6;
+  text-decoration: underline;
 }
 
 .travaux button {
@@ -191,10 +190,15 @@ main .intro {
 .travaux button:hover {
     background: var(--cyberBlue);
     color: #050510;
-
     box-shadow:
         0 0 10px var(--cyberBlue);
     transform: translateY(-3px);
+    &::before {
+      left: 140%;
+    }
+    &::after {
+      width: 80%;
+    }
 }
 
 /* balayage lumineux */
@@ -211,9 +215,6 @@ main .intro {
 
     transform: rotate(25deg);
     transition: left 0.5s ease;
-}
-.travaux button:hover::before {
-    left: 140%;
 }
 
 /* ligne décorative */
@@ -232,9 +233,6 @@ main .intro {
 
     transform: translateX(-50%);
     transition: all 0.25s ease;
-}
-.travaux button:hover::after {
-    width: 80%;
 }
 
 section.realisations {
@@ -313,6 +311,9 @@ section.realisations > *:not(.escapeButton) {
 
     backdrop-filter: blur(8px);
     transition: all 0.2s ease;
+    &active {
+      transform: scale(0.92);
+    }
 }
 
 #burgerButton:hover {
@@ -323,9 +324,6 @@ section.realisations > *:not(.escapeButton) {
         0 0 25px rgba(255, 0, 255, 0.2);
 
     transform: translateY(-2px);
-}
-#burgerButton:active {
-    transform: scale(0.92);
 }
 
 nav {
@@ -342,13 +340,21 @@ nav {
   z-index: 2;
 
   transition: all 0.25s ease-out;
+  &.affiche {
+    transform: translateY(0);
+  }
+  &.cache {
+    transform: translateY(-100%);
+  }
 }
 
-nav.affiche {
-  transform: translateY(0);
-}
-nav.cache {
-  transform: translateY(-120%);
+#contacts nav, #propos nav {
+  &.affiche {
+    transform: translateY(-20%);
+  }
+  &.cache {
+    transform: translateY(-120%);
+  }
 }
 
 nav ul {
