@@ -1,6 +1,13 @@
 .standardTheme {
-    --cyberPink: #ff00ff;
-    --cyberBlue: #00ffff;
+  --cyberPink: #ff00ff;
+  --cyberBlue: #00ffff;
+  --cyberPurple: #8B5CF6;
+
+  --cyberBlueRGB: 0, 255, 255;
+  --cyberPinkRGB: 255, 0, 255;
+  --cyberPurpleRGB: 139, 92, 246;
+
+  --blackFont: rgba(0, 0, 0, 0.75);
 }
 
 .escapeButton {
@@ -159,8 +166,8 @@ main .intro {
   overflow: hidden;
 
   box-shadow:
-    0 0 10px rgba(0, 255, 255, 0.15),
-    0 0 20px rgba(255, 0, 255, 0.1);
+    0 0 10px rgba(var(--cyberBlueRGB), 0.15),
+    0 0 20px rgba(var(--cyberPurpleRGB), 0.1);
 
   transition: 0.25s ease;
 }
@@ -174,7 +181,7 @@ main .intro {
 }
 
 .travaux li h3 {
-  color: #8B5CF6;
+  color: var(--cyberPurple);
   text-decoration: underline;
 }
 
@@ -199,7 +206,7 @@ main .intro {
     border-radius: 4px;
     box-shadow:
         0 0 5px var(--cyberBlue),
-        inset 0 0 5px rgba(0, 255, 255, 0.5);
+        inset 0 0 5px rgba(var(--cyberBlueRGB), 0.5);
 
     transition: all 0.25s ease;
 }
@@ -258,7 +265,7 @@ section.realisations {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0,0,0,0.75);
+  background: var(--blackFont);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -279,9 +286,9 @@ section.realisations > *:not(.escapeButton) {
   padding: 12px 24px;
 
   box-shadow:
-    0 0 8px rgba(0, 247, 255, 0.5),
-    0 0 20px rgba(0, 247, 255, 0.2),
-    inset 0 0 10px rgba(255, 0, 200, 0.15);
+    0 0 8px rgba(var(--cyberBlueRGB), 0.5),
+    0 0 20px rgba(var(--cyberBlueRGB), 0.2),
+    inset 0 0 10px rgba(var(--cyberPurpleRGB), 0.15);
 
   backdrop-filter: blur(4px);
   transition:
@@ -295,8 +302,8 @@ section.realisations > *:not(.escapeButton) {
     font-size: 30px;
 
     color: var(--cyberBlue);
-    background: rgba(0, 255, 255, 0.12);
-    border: 1px solid rgba(0, 255, 255, 0.6);
+    background: rgba(var(--cyberBlueRGB), 0.12);
+    border: 1px solid rgba(var(--cyberBlueRGB), 0.6);
     border-radius: 8px;
     z-index: 3;
 
@@ -306,8 +313,8 @@ section.realisations > *:not(.escapeButton) {
     left: 22px;
 
     box-shadow:
-        0 0 10px rgba(0, 255, 255, 0.25),
-        inset 0 0 6px rgba(0, 255, 255, 0.15);
+        0 0 10px rgba(var(--cyberBlueRGB), 0.25),
+        inset 0 0 6px rgba(var(--cyberBlueRGB), 0.15);
 
     backdrop-filter: blur(8px);
     transition: all 0.2s ease;
@@ -317,11 +324,11 @@ section.realisations > *:not(.escapeButton) {
 }
 
 #burgerButton:hover {
-    background: rgba(0, 255, 255, 0.25);
+    background: rgba(var(--cyberBlueRGB), 0.25);
 
     box-shadow:
-        0 0 14px rgba(0, 255, 255, 0.5),
-        0 0 25px rgba(255, 0, 255, 0.2);
+        0 0 14px rgba(var(--cyberBlueRGB), 0.5),
+        0 0 25px rgba(var(--cyberPurpleRGB), 0.2);
 
     transform: translateY(-2px);
 }
@@ -334,8 +341,8 @@ nav {
   backdrop-filter:
     blur(8px);
   box-shadow:
-        0 0 15px rgba(0, 255, 255, 0.3),
-        0 0 30px rgba(255, 0, 255, 0.15);
+        0 0 15px rgba(var(--cyberBlueRGB), 0.3),
+        0 0 30px rgba(var(--cyberPurpleRGB), 0.15);
   border-bottom: 2px solid var(--cyberBlue);
   z-index: 2;
 
@@ -369,10 +376,10 @@ nav ul button {
     padding: 10px 16px;
     margin-top: 15%;
 
-    background: rgba(0, 255, 255, 0.15);
+    background: rgba(var(--cyberBlueRGB), 0.15);
     color: var(--cyberBlue);
 
-    border: 1px solid rgba(0, 255, 255, 0.7);
+    border: 1px solid rgba(var(--cyberBlueRGB), 0.7);
     border-radius: 6px;
 
     font-size: 12px;
@@ -385,21 +392,21 @@ nav ul button {
     }
 
     box-shadow:
-        0 0 8px rgba(0, 255, 255, 0.25),
-        inset 0 0 6px rgba(0, 255, 255, 0.15);
+        0 0 8px rgba(var(--cyberBlueRGB), 0.25),
+        inset 0 0 6px rgba(var(--cyberBlueRGB), 0.15);
 
     transition: all 0.2s ease;
 }
 
 nav ul button:hover {
-    background: rgba(0, 255, 255, 0.25);
+    background: rgba(var(--cyberBlueRGB), 0.25);
     color: #0b1020;
 
     transform: translateY(-2px);
 
     box-shadow:
-        0 0 12px rgba(0, 255, 255, 0.6),
-        0 0 25px rgba(255, 0, 255, 0.25);
+        0 0 12px rgba(var(--cyberBlueRGB), 0.6),
+        0 0 25px rgba(var(--cyberPurpleRGB), 0.25);
 }
 
 #settingsPage {
@@ -409,7 +416,7 @@ nav ul button:hover {
   width: 100vw;
   height: 100vh;
 
-  background: rgba(0,0,0,0.75);
+  background: var(--blackFont);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -431,9 +438,9 @@ nav ul button:hover {
   padding: 12px 24px;
 
   box-shadow:
-    0 0 8px rgba(0, 247, 255, 0.5),
-    0 0 20px rgba(0, 247, 255, 0.2),
-    inset 0 0 10px rgba(255, 0, 200, 0.15);
+    0 0 8px rgba(var(--cyberBlueRGB), 0.5),
+    0 0 20px rgba(var(--cyberBlueRGB), 0.2),
+    inset 0 0 10px rgba(var(--cyberPurpleRGB), 0.15);
 
   backdrop-filter: blur(4px);
   transition:
