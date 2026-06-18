@@ -472,6 +472,11 @@ nav ul button:hover {
     0 0 12px rgba(0, 212, 212, 0.7);
 }
 
+#settingsPage fieldset:hover {
+  border: 1px solid rgba(0, 255, 255, 0.63);
+  box-shadow: 0 0 16px rgba(0, 212, 212, 0.8);
+}
+
 #settingsPage legend {
   letter-spacing: 1px;
   padding: 3px 12px;
@@ -479,10 +484,10 @@ nav ul button:hover {
 
   background: rgba(6, 1, 46, 0.3);
   backdrop-filter: blur(2px);
-  border: 1px solid #05b7b7;
+  border: 1px solid #05acac;
 
   box-shadow:
-    0 0 8px #00ffff,
+    0 0 6px #00ffff,
     0 0 18px rgba(255, 0, 200, 0.3);
 
   transform: translateY(-3px);
