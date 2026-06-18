@@ -295,6 +295,12 @@ section.realisations > *:not(.escapeButton) {
     border-color 0.25s ease;
 }
 
+section.realisations h2 {
+  margin: 8px;
+  text-align: center;
+  text-decoration: underline;
+}
+
 #burgerButton {
     padding: 12px;
     font-size: 30px;
