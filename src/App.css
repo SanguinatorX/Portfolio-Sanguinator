@@ -159,7 +159,7 @@ main .intro {
 .travaux li {
   text-align: center;
   padding: 12px;
-  background: rgba(15, 15, 30, 0.8);
+  background: rgba(26, 26, 48, 0.8);
   border: 1px solid var(--cyberBlue);
   border-radius: 12px;
   position: relative;
