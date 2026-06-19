@@ -1,5 +1,7 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
 
+const savedTheme = localStorage.getItem("theme-sanguinator") || "standardTheme";
+
 const textSizeSlice = createSlice({
   name: "textSize",
   initialState: "16",
@@ -22,7 +24,7 @@ const colorTextSlice = createSlice({
 
 const themeSlice = createSlice({
   name: "theme",
-  initialState: "standardTheme",
+  initialState: savedTheme,
   reducers: {
     changeTheme: (prevState, action) => {
       return action.payload;

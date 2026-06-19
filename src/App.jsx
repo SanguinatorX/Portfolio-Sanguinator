@@ -128,7 +128,7 @@ function App () {
   const textSize = useSelector((state) => state.textSize);
   
   return (
-    <div id="app" className={theme} style={{ color: textColor, fontSize: textSize }}>
+    <div id="app" className={theme} style={{ color: textColor, fontSize: textSize + "px" }}>
       <button id="burgerButton" onClick={() => { setIsOpen((prev) => !prev) }}><FontAwesomeIcon icon={faBarsStaggered} /></button>
       <NavMenu isOpen={isOpen} />
       <Header />
