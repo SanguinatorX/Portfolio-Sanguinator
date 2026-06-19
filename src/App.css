@@ -10,6 +10,42 @@
   --blackFont: rgba(0, 0, 0, 0.75);
 }
 
+.redTheme {
+  --cyberPink: #ff4d6d;
+  --cyberBlue: #ff1f3d;
+  --cyberPurple: #b91c1c;
+
+  --cyberPinkRGB: 255, 77, 109;
+  --cyberBlueRGB: 255, 31, 61;
+  --cyberPurpleRGB: 185, 28, 28;
+
+  --blackFont: rgba(0, 0, 0, 0.75);
+}
+
+.yellowTheme {
+  --cyberPink: #ffe066;
+  --cyberBlue: #ffcc00;
+  --cyberPurple: #d4a017;
+
+  --cyberPinkRGB: 255, 224, 102;
+  --cyberBlueRGB: 255, 204, 0;
+  --cyberPurpleRGB: 212, 160, 23;
+
+  --blackFont: rgba(0, 0, 0, 0.75);
+}
+
+.greenTheme {
+  --cyberPink: #4dff88;
+  --cyberBlue: #19ff66;
+  --cyberPurple: #16a34a;
+
+  --cyberPinkRGB: 77, 255, 136;
+  --cyberBlueRGB: 25, 255, 102;
+  --cyberPurpleRGB: 22, 163, 74;
+
+  --blackFont: rgba(0, 0, 0, 0.75);
+}
+
 .escapeButton {
   position: absolute;
   top: 12px;
@@ -341,7 +377,7 @@ nav {
   position: fixed;
   width: 100%;
   height: 120px;
-  background: rgba(1, 132, 147, 0.6);
+  background: rgba(var(--cyberBlueRGB), 0.35);
   backdrop-filter:
     blur(8px);
   box-shadow:
@@ -457,24 +493,24 @@ nav ul button:hover {
 #settingsPage h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.25);
+  text-shadow: 0 0 10px rgba(var(--cyberBlueRGB), 0.25);
   margin-bottom: 15px;
 }
 
 #settingsPage fieldset {
-  border: 1px solid rgba(0, 255, 255, 0.432);
+  border: 1px solid rgba(var(--cyberBlueRGB), 0.432);
   border-radius: 8px;
   padding: 14px;
   margin: 30px 0;
 
   background: rgba(10, 12, 20, 0.4);
   box-shadow: inset 0 0 10px rgba(255, 0, 200, 0.05),
-    0 0 12px rgba(0, 212, 212, 0.7);
+    0 0 12px rgba(var(--cyberBlueRGB), 0.7);
 }
 
 #settingsPage fieldset:hover {
-  border: 1px solid rgba(0, 255, 255, 0.63);
-  box-shadow: 0 0 16px rgba(0, 212, 212, 0.8);
+  border: 1px solid rgba(var(--cyberBlueRGB), 0.63);
+  box-shadow: 0 0 16px rgba(var(--cyberBlueRGB), 0.8);
 }
 
 #settingsPage legend {
@@ -484,11 +520,11 @@ nav ul button:hover {
 
   background: rgba(6, 1, 46, 0.3);
   backdrop-filter: blur(2px);
-  border: 1px solid #05acac;
+  border: 1px solid var(--cyberBlue);
 
   box-shadow:
-    0 0 6px #00ffff,
-    0 0 18px rgba(255, 0, 200, 0.3);
+    0 0 6px var(--cyberBlue),
+    0 0 18px rgba(var(--cyberPurple), 0.3);
 
   transform: translateY(-3px);
   position: relative;
@@ -569,7 +605,7 @@ nav ul button:hover {
   background: rgba(5, 6, 10, 0.9);
   color: #cfffff;
 
-  border: 1px solid rgba(0, 255, 255, 0.25);
+  border: 1px solid rgba(var(--cyberBlueRGB), 0.25);
   border-radius: 6px;
 
   outline: none;
@@ -621,9 +657,9 @@ input[type="color"] {
   letter-spacing: 4px;
   text-transform: uppercase;
 
-  text-shadow: 0 0 6px rgba(0, 255, 255, 0.25);
+  text-shadow: 0 0 6px rgba(var(--cyberBlueRGB), 0.25);
 
-  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(var(--cyberBlueRGB), 0.2);
   padding-bottom: 6px;
 }
 
@@ -633,15 +669,15 @@ input[type="color"] {
   font-size: 1.05rem;
 
   text-shadow:
-    0 0 4px rgba(0, 255, 255, 0.25),
-    0 0 10px rgba(0, 255, 200, 0.1);
+    0 0 4px rgba(var(--cyberBlueRGB), 0.25),
+    0 0 10px rgba(var(--cyberBlueRGB), 0.1);
 
-  border-left: 2px solid rgba(0, 255, 255, 0.2);
+  border-left: 2px solid rgba(var(--cyberBlueRGB), 0.2);
   padding-left: 12px;
 
   background: linear-gradient(
     90deg,
-    rgba(0, 255, 255, 0.06),
+    rgba(var(--cyberBlueRGB), 0.06),
     transparent
   );
 }
