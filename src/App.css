@@ -1,51 +1,3 @@
-.standardTheme {
-  --cyberPink: #ff00ff;
-  --cyberBlue: #00ffff;
-  --cyberPurple: #8B5CF6;
-
-  --cyberBlueRGB: 0, 255, 255;
-  --cyberPinkRGB: 255, 0, 255;
-  --cyberPurpleRGB: 139, 92, 246;
-
-  --blackFont: rgba(0, 0, 0, 0.75);
-}
-
-.redTheme {
-  --cyberPink: #ff4d6d;
-  --cyberBlue: #ff1f3d;
-  --cyberPurple: #b91c1c;
-
-  --cyberPinkRGB: 255, 77, 109;
-  --cyberBlueRGB: 255, 31, 61;
-  --cyberPurpleRGB: 185, 28, 28;
-
-  --blackFont: rgba(0, 0, 0, 0.75);
-}
-
-.yellowTheme {
-  --cyberPink: #ffe066;
-  --cyberBlue: #ffcc00;
-  --cyberPurple: #d4a017;
-
-  --cyberPinkRGB: 255, 224, 102;
-  --cyberBlueRGB: 255, 204, 0;
-  --cyberPurpleRGB: 212, 160, 23;
-
-  --blackFont: rgba(0, 0, 0, 0.75);
-}
-
-.greenTheme {
-  --cyberPink: #4dff88;
-  --cyberBlue: #19ff66;
-  --cyberPurple: #16a34a;
-
-  --cyberPinkRGB: 77, 255, 136;
-  --cyberBlueRGB: 25, 255, 102;
-  --cyberPurpleRGB: 22, 163, 74;
-
-  --blackFont: rgba(0, 0, 0, 0.75);
-}
-
 .escapeButton {
   position: absolute;
   top: 12px;
@@ -222,75 +174,9 @@ main .intro {
 }
 
 .travaux button {
-    position: relative;
     padding: 8px 12px;
     margin-top: 6px;
     width: 40%;
-
-    border: 1px solid var(--cyberBlue);
-    background: rgba(0, 10, 20, 0.85);
-
-    color: var(--cyberBlue);
-    font-family: "Audiowide";
-    letter-spacing: 2px;
-
-    cursor: pointer;
-    overflow: hidden;
-
-    border-radius: 4px;
-    box-shadow:
-        0 0 5px var(--cyberBlue),
-        inset 0 0 5px rgba(var(--cyberBlueRGB), 0.5);
-
-    transition: all 0.25s ease;
-}
-
-.travaux button:hover {
-    background: var(--cyberBlue);
-    color: #050510;
-    box-shadow:
-        0 0 10px var(--cyberBlue);
-    transform: translateY(-3px);
-    &::before {
-      left: 140%;
-    }
-    &::after {
-      width: 80%;
-    }
-}
-
-/* balayage lumineux */
-.travaux button::before {
-    content: "";
-    position: absolute;
-
-    top: -50%;
-    left: -100%;
-
-    width: 60%;
-    height: 200%;
-    background: rgba(255, 255, 255, 0.25);
-
-    transform: rotate(25deg);
-    transition: left 0.5s ease;
-}
-
-/* ligne décorative */
-.travaux button::after {
-    content: "";
-    position: absolute;
-
-    bottom: 0;
-    left: 50%;
-
-    width: 0;
-    height: 2px;
-
-    background: var(--cyberBlue);
-    box-shadow: 0 0 10px var(--cyberBlue);
-
-    transform: translateX(-50%);
-    transition: all 0.25s ease;
 }
 
 section.realisations {
@@ -338,7 +224,7 @@ section.realisations h2 {
 }
 
 #burgerButton {
-    padding: 12px;
+    padding: 10px 14px;
     font-size: 30px;
 
     color: var(--cyberBlue);
@@ -497,18 +383,19 @@ nav ul button:hover {
   margin-bottom: 15px;
 }
 
-#settingsPage fieldset {
+#settingsPage fieldset:not(:last-child) {
   border: 1px solid rgba(var(--cyberBlueRGB), 0.432);
   border-radius: 8px;
   padding: 14px;
   margin: 30px 0;
+  text-align: left;
 
   background: rgba(10, 12, 20, 0.4);
   box-shadow: inset 0 0 10px rgba(255, 0, 200, 0.05),
     0 0 12px rgba(var(--cyberBlueRGB), 0.7);
 }
 
-#settingsPage fieldset:hover {
+#settingsPage fieldset:hover:not(:last-child) {
   border: 1px solid rgba(var(--cyberBlueRGB), 0.63);
   box-shadow: 0 0 16px rgba(var(--cyberBlueRGB), 0.8);
 }
@@ -650,6 +537,13 @@ input[type="color"] {
   border: 0;
   opacity: 0;
   cursor: pointer;
+}
+
+#settingsPage button {
+  text-align: center;
+  padding: 8px 10px;
+  margin: 2px 8px;
+  letter-spacing: 1px;
 }
 
 #contacts h1, #propos h1 {

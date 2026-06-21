@@ -37,13 +37,15 @@ function Settings () {
                         <option value="yellowTheme">Jaune</option>
                     </select>
                 </fieldset>
-                <input type="submit" value="Enregistrer" onClick={() => {
-                    dispatch(changeSize(sizeRef.current.value));
-                    dispatch(changeColor(colorRef.current.value));
-                    dispatch(changeTheme(themeRef.current.value));
-                    localStorage.setItem("theme-sanguinator", themeRef.current.value);
-                }} />
-                <input type="reset" value="Rétablir les modifications" />
+                <fieldset>
+                    <button type="submit" onClick={() => {
+                        dispatch(changeSize(sizeRef.current.value));
+                        dispatch(changeColor(colorRef.current.value));
+                        dispatch(changeTheme(themeRef.current.value));
+                        localStorage.setItem("theme-sanguinator", themeRef.current.value);
+                    }}>Enregistrer</button>
+                    <button type="reset">Rétablir les modifications</button>
+                </fieldset>
             </form>
         </div>
     );
