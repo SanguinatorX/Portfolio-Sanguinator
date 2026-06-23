@@ -263,7 +263,7 @@ section.realisations h2 {
 nav {
   position: fixed;
   width: 100%;
-  height: 120px;
+  min-height: 120px;
   background: rgba(var(--cyberBlueRGB), 0.35);
   backdrop-filter:
     blur(8px);
@@ -297,6 +297,10 @@ nav ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  @media screen and (max-width:900px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 nav ul button {
@@ -323,7 +327,11 @@ nav ul button {
         0 0 8px rgba(var(--cyberBlueRGB), 0.25),
         inset 0 0 6px rgba(var(--cyberBlueRGB), 0.15);
 
-    transition: all 0.2s cubic-bezier(.4,.9,.2,1);
+    transition: all 0.2s cubic-bezier(0.4, 0.9, 0.2, 1);
+    @media screen and (max-width:900px) {
+      width: 300px;
+      height: 50px;
+    }
 }
 
 nav ul button:hover {
