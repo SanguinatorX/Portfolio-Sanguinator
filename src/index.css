@@ -36,6 +36,11 @@
   100% { background-position: 100% 50%; }
 }
 
+@keyframes scan {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
 @layer base {
     html, body {
         font-family: 'Audiowide';
@@ -50,6 +55,7 @@
                 rgba(0, 0, 0, 0.5)
             ), url('/public/cyber-background.png') no-repeat fixed;
         background-size: cover;
+        color-scheme: light;
     }
 
     ::selection {
@@ -65,8 +71,6 @@
         --cyberBlueRGB: 0, 255, 255;
         --cyberPinkRGB: 255, 0, 255;
         --cyberPurpleRGB: 139, 92, 246;
-
-        --blackFont: rgba(0, 0, 0, 0.75);
     }
 
     .redTheme {
@@ -77,8 +81,6 @@
         --cyberPinkRGB: 255, 77, 109;
         --cyberBlueRGB: 255, 31, 61;
         --cyberPurpleRGB: 185, 28, 28;
-
-        --blackFont: rgba(0, 0, 0, 0.75);
     }
 
     .yellowTheme {
@@ -89,8 +91,6 @@
         --cyberPinkRGB: 255, 224, 102;
         --cyberBlueRGB: 255, 204, 0;
         --cyberPurpleRGB: 212, 160, 23;
-
-        --blackFont: rgba(0, 0, 0, 0.75);
     }
 
     .greenTheme {
@@ -101,8 +101,6 @@
         --cyberPinkRGB: 77, 255, 136;
         --cyberBlueRGB: 25, 255, 102;
         --cyberPurpleRGB: 22, 163, 74;
-
-        --blackFont: rgba(0, 0, 0, 0.75);
     }
 
     ul {
@@ -160,7 +158,7 @@
 
         width: 60%;
         height: 200%;
-        background: rgba(255, 255, 255, 0.25);
+        background: rgba(255, 255, 255, 0.2);
 
         transform: rotate(25deg);
         transition: left 0.5s ease;
@@ -182,5 +180,9 @@
 
         transform: translateX(-50%);
         transition: all 0.25s ease;
+    }
+
+    hr {
+        width: 98%;
     }
 }

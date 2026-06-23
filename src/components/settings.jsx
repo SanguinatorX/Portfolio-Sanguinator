@@ -22,21 +22,25 @@ function Settings () {
                 <h1>Settings</h1>
                 <fieldset>
                     <legend>Taille du texte</legend>
-                    <input type="range" min="6" max="24" step="1" defaultValue="16" ref={sizeRef} />
+                    <label htmlFor="textSizeSelector">Choisissez une taille pour le texte :</label>
+                    <input type="range" id="textSizeSelector" min="6" max="24" step="1" defaultValue="16" ref={sizeRef} />
                 </fieldset>
                 <fieldset>
                     <legend>Couleur du texte</legend>
-                    <div className="colorator-wrap"><input type="color" defaultValue="#ffffff" ref={colorRef} /></div>
+                    <label htmlFor="textColorSelector">Choisissez une couleur pour le texte :</label>
+                    <div className="colorator-wrap"><input type="color" id="textColorSelector" defaultValue="#ffffff" ref={colorRef} /></div>
                 </fieldset>
                 <fieldset>
                     <legend>Thème du site</legend>
-                    <select defaultValue="standardTheme" ref={themeRef}>
-                        <option value="standardTheme">Standard</option>
-                        <option value="greenTheme">Vert</option>
-                        <option value="redTheme">Rouge</option>
-                        <option value="yellowTheme">Jaune</option>
+                    <label htmlFor="themeSelector">Choisissez un thème pour le site parmi les options disponibles :</label>
+                    <select id="themeSelector" defaultValue="standardTheme" ref={themeRef}>
+                        <option value="standardTheme">Standard 😑</option>
+                        <option value="greenTheme">Végétal 🌳</option>
+                        <option value="redTheme">Ensanglanté 🩸</option>
+                        <option value="yellowTheme">Jaunisse 🫠</option>
                     </select>
                 </fieldset>
+                <hr />
                 <fieldset>
                     <button type="submit" onClick={() => {
                         dispatch(changeSize(sizeRef.current.value));
